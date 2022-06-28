@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/FUGUzen/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/FUGUzen/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/FUGUzen/frontend-project-lvl1#readme",
+  "bin": {
+    "brain-games": "bin/brain-games.js"	
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
