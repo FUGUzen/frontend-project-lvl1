@@ -1,16 +1,15 @@
 #!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
+import { userName } from '../src/cli.js';
 
-export const getEvents = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+const getEvents = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
   const rounds = 3;
 
   for (let i = 0; i < rounds; i += 1) {
-    const randomNumber = Math.floor(Math.random() * 100);
+    const randomNumber = Math.floor((Math.random() * 100) + 1);
+
     const isEvenNumber = randomNumber % 2 === 0;
     const expectedAnswer = isEvenNumber ? 'yes' : 'no';
     console.log(`Question ${randomNumber}`);
