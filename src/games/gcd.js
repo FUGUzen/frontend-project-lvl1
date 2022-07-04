@@ -19,7 +19,6 @@ const gcdCalc = (a, b) => {
     return gcd;
 };
 
-
 const brainGcd = () => {
     const randomNumber1 = getRandomNumber(30);
     const randomNumber2 = getRandomNumber(30);
