@@ -6,25 +6,25 @@ const discription = 'What number is missing in the progression?';
 const lengthProgression = 10;
 
 const brainProgression = () => {
-    const firstNum = getRandomNumber(50);
-    const step = getRandomNumber(5);
-    const arr = [];
+  const firstNum = getRandomNumber(50);
+  const step = getRandomNumber(5);
+  const arr = [];
 
-    for (let i = 1; i <= lengthProgression; i += 1) {
-        arr.push(firstNum + i * step);
-    }
-    const hiddenElementPosition = getRandomNumber(lengthProgression);
+  for (let i = 1; i <= lengthProgression; i += 1) {
+    arr.push(firstNum + i * step);
+  }
+  const hiddenElementPosition = getRandomNumber(lengthProgression);
 
-    const rightAnswer = String(arr[hiddenElementPosition]);
-    arr[hiddenElementPosition] = '..';
+  const rightAnswer = String(arr[hiddenElementPosition]);
+  arr[hiddenElementPosition] = '..';
 
-    const question = `${arr.join(' ')}`;
+  const question = `${arr.join(' ')}`;
 
-    return [question, rightAnswer];
+  return [question, rightAnswer];
 };
 
 const startBrainProgressionGame = () => {
-    gameEngine(discription, brainProgression);
+  gameEngine(discription, brainProgression);
 };
 
 export default startBrainProgressionGame;
