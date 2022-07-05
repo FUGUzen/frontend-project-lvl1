@@ -31,7 +31,6 @@ const brainCalc = () => {
     default:
       break;
   }
-  rightAnswer = String(rightAnswer);
   return [randomOperation, rightAnswer];
 };
 
