@@ -22,7 +22,7 @@ const gcdCalc = (a, b) => {
 const brainGcd = () => {
   const randomNumber1 = getRandomNumber(30);
   const randomNumber2 = getRandomNumber(30);
-  const randomNumbers = `${randomNumber1}, ${randomNumber2}`;
+  const randomNumbers = `${randomNumber1} ${randomNumber2}`;
 
   let rightAnswer = gcdCalc(randomNumber1, randomNumber2);
   rightAnswer = String(rightAnswer);
