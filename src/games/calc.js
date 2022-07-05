@@ -20,7 +20,7 @@ const brainCalc = () => {
   let rightAnswer = 0;
   switch (operator) {
     case '+':
-      rightAnswer = number1 + number2;
+      rightAnswer = Number(number1) + Number(number2);
       break;
     case '-':
       rightAnswer = number1 - number2;
