@@ -5,7 +5,7 @@ const discription = 'What is the result of the expression?';
 
 const randomOperationGenerator = () => {
   const operation = ['', '+', '-', '*'];
-  let result = ' ';
+  let result = '';
   const i = getRandomNumber(3);
   result = `${getRandomNumber(30)} ${operation[i]} ${getRandomNumber(20)}`;
   return result;
@@ -31,6 +31,7 @@ const brainCalc = () => {
     default:
       break;
   }
+  rightAnswer = String(rightAnswer);
   return [randomOperation, rightAnswer];
 };
 
