@@ -6,7 +6,7 @@ const discription = 'Find the greatest common divisor of given numbers.';
 const gcdCalc = (a, b) => {
   let number1 = a;
   let number2 = b;
-  let gcd;
+  let gcd = '';
 
   while (number1 !== number2) {
     if (number1 > number2) {
