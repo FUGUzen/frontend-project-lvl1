@@ -7,7 +7,7 @@ const isEvenNumber = (randomNumber) => randomNumber % 2 === 0;
 
 const brainEven = () => {
   const randomNumber = getRandomNumber(30);
-  const rightAnswer = isEvenNumber ? 'yes' : 'no';
+  const rightAnswer = isEvenNumber(randomNumber) ? 'yes' : 'no';
   return [randomNumber, rightAnswer];
 };
 
