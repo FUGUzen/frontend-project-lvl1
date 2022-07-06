@@ -13,7 +13,7 @@ const brainProgression = () => {
   for (let i = 1; i <= lengthProgression; i += 1) {
     arr.push(firstNum + i * step);
   }
-  const hiddenElementPosition = (getRandomNumber(lengthProgression) - 1);
+  const hiddenElementPosition = getRandomNumber(lengthProgression);
 
   const rightAnswer = String(arr[hiddenElementPosition]);
   arr[hiddenElementPosition] = '..';

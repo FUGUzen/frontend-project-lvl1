@@ -1,42 +1,32 @@
-import gameEngine from '../index.js';
-import getRandomNumber from '../getRandomNumber.js';
+import runEngine from '../index.js';
+import getRandomNumber from '../../utils/helpers/utils.js';
 
 const discription = 'What is the result of the expression?';
 
-const randomOperationGenerator = () => {
-  const operation = ['', '+', '-', '*'];
-  let result = '';
-  const i = getRandomNumber(3);
-  result = `${getRandomNumber(30)} ${operation[i]} ${getRandomNumber(20)}`;
-  return result;
-};
+const mathOperators = ['+', '-', '*'];
 
-const brainCalc = () => {
-  const randomOperation = randomOperationGenerator();
-  const operation = randomOperation.split(' ');
-  const operator = operation[1];
-  const number1 = operation[0];
-  const number2 = operation[2];
-  let rightAnswer = 0;
-  switch (operator) {
+const generateOperation = (firstNum, secondNum, mathOperator) => {
+  switch (mathOperator) {
     case '+':
-      rightAnswer = Number(number1) + Number(number2);
-      break;
+      return firstNum + secondNum;
     case '-':
-      rightAnswer = number1 - number2;
-      break;
+      return firstNum - secondNum;
     case '*':
-      rightAnswer = number1 * number2;
-      break;
+      return firstNum * secondNum
     default:
-      break;
   }
-  rightAnswer = String(rightAnswer);
-  return [randomOperation, rightAnswer];
+  return  false;
 };
 
-const startBrainCalcGame = () => {
-  gameEngine(discription, brainCalc);
-};
+const getCalc = () => {
+  const firstNumber = getRandomNumber(1, 30);
+  const secondNumber = getRandomNumber(1, 30);
+  const mathOperator = mathOperators[getRandomNumber(0, mathOperators.length - 1)];
+  const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
+  const rightAnswer = String(generateOperation(firstNumber, secondNumber, mathOperator));
+  return [question, rightAnswer];
+}
+
+const startBrainCalcGame = () => runEngine(discription, getCalc);
 
 export default startBrainCalcGame;
