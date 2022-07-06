@@ -6,7 +6,7 @@ const discription = 'What number is missing in the progression?';
 const lengthProgression = 10;
 
 const brainProgression = () => {
-  const firstNum = getRandomNumber(50);
+  const firstNum = getRandomNumber(30);
   const step = getRandomNumber(5);
   const arr = [];
 
