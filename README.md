@@ -1,4 +1,4 @@
-# Brain Games :video_game:
+# :video_game: Brain Games :video_game:
 This is a project of several thinking games.
 ___
 ### Hexlet tests and linter status:
@@ -19,23 +19,23 @@ How to install and launch games:
 5. Now you can run any of the games by calling in the command line.
 
 ### The brain-games series includes games:
-+ brain-even:space_invader:
-+ brain-calc:space_invader:
-+ brain-gcd:space_invader:
-+ brain-progression:space_invader:
-+ brain-prime:space_invader:
++ :space_invader:brain-even
++ :space_invader:brain-calc
++ :space_invader:brain-gcd
++ :space_invader:brain-progression
++ :space_invader:brain-prime
 ___
 ### brain-even
-![asciicast](https://asciinema.org/a/pOnH99pElmm3MPEst3ndHd2io.svg)
+[![asciicast](https://asciinema.org/a/dvxvRRf0McWPC3K0hThAPTwn9.svg)](https://asciinema.org/a/dvxvRRf0McWPC3K0hThAPTwn9)
 
 ### brain-calc
-[![asciicast](https://asciinema.org/a/VPkKYKeIx89Oi1XWLNl6amkMu.svg)](https://asciinema.org/a/VPkKYKeIx89Oi1XWLNl6amkMu)
+[![asciicast](https://asciinema.org/a/umiazdOCcmsqanDilgZSI1PpH.svg)](https://asciinema.org/a/umiazdOCcmsqanDilgZSI1PpH)
 
 ### brain-gcd
-[![asciicast](https://asciinema.org/a/522i3CD397nnejksEyIs13JI3.svg)](https://asciinema.org/a/522i3CD397nnejksEyIs13JI3)
+[![asciicast](https://asciinema.org/a/zP4mMFFDVy1sfaMLbwgpQ9waL.svg)](https://asciinema.org/a/zP4mMFFDVy1sfaMLbwgpQ9waL)
 
 ### brain-progression
-[![asciicast](https://asciinema.org/a/dBINpPQumqvfsy1yNuSxbIIil.svg)](https://asciinema.org/a/dBINpPQumqvfsy1yNuSxbIIil)
+[![asciicast](https://asciinema.org/a/ezkhRrUoGfcHCyjaeuhh4ZG8E.svg)](https://asciinema.org/a/ezkhRrUoGfcHCyjaeuhh4ZG8E)
 
 ### brain-prime
-[![asciicast](https://asciinema.org/a/71A6WY5qmCSIRMFDXLzRGGaVG.svg)](https://asciinema.org/a/71A6WY5qmCSIRMFDXLzRGGaVG)
+[![asciicast](https://asciinema.org/a/uOeWiAtMlyb5ppJztr7YwaX0f.svg)](https://asciinema.org/a/uOeWiAtMlyb5ppJztr7YwaX0f)
