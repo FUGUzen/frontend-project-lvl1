@@ -1,7 +1,6 @@
 import runEngine from '../index.js';
 import getRandomNumber from '../../utils/helpers/utils.js';
 
-
 const discription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = (num) => {

@@ -14,7 +14,7 @@ const runEngine = (discription, generateRound) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== rightAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.\nLet's try again, ${userName}!`);
-      return
+      return;
     }
     console.log('Correct!');
   }

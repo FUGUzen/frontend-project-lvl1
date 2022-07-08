@@ -12,10 +12,10 @@ const generateOperation = (firstNum, secondNum, mathOperator) => {
     case '-':
       return firstNum - secondNum;
     case '*':
-      return firstNum * secondNum
+      return firstNum * secondNum;
     default:
   }
-  return  false;
+  return false;
 };
 
 const getCalc = () => {
@@ -25,7 +25,7 @@ const getCalc = () => {
   const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
   const rightAnswer = String(generateOperation(firstNumber, secondNumber, mathOperator));
   return [question, rightAnswer];
-}
+};
 
 const startBrainCalcGame = () => runEngine(discription, getCalc);
 
