@@ -22,7 +22,7 @@ const getGcd = (a, b) => {
 
 const generateGameData = () => {
   const randomNumber1 = getRandomNumber(1, 30);
-  const randomNumber2 = getRandomNumber(1, 30);
+  const randomNumber2 = getRandomNumber(1, 20);
   const question = `${randomNumber1} ${randomNumber2}`;
 
   let rightAnswer = getGcd(randomNumber1, randomNumber2).toString();
