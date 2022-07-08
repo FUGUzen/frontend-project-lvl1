@@ -5,7 +5,7 @@ const discription = 'What number is missing in the progression?';
 
 const lengthProgression = 10;
 
-const brainProgression = () => {
+const getProgression = () => {
   const firstNum = getRandomNumber(1, 30);
   const step = getRandomNumber(1, 5);
   const arr = [];
@@ -24,7 +24,7 @@ const brainProgression = () => {
 };
 
 const startBrainProgressionGame = () => {
-  runEngine(discription, brainProgression);
+  runEngine(discription, getProgression);
 };
 
 export default startBrainProgressionGame;
