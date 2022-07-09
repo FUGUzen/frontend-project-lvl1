@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { minValue, maxValue, getRandomNumber } from '../../utils/helpers/utils.js';
+import { minValue, maxValue, getRandomNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 

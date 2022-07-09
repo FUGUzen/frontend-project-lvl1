@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
-import { minValue, maxValue, getRandomNumber } from '../../utils/helpers/utils.js';
+import getRandomNumber from '../../utils/helpers/utils.js';
 
-const description = 'What is the result of the expression?';
+const discription = 'What is the result of the expression?';
 
 const mathOperators = ['+', '-', '*'];
 
@@ -19,14 +19,14 @@ const generateOperation = (firstNum, secondNum, mathOperator) => {
 };
 
 const getCalc = () => {
-  const firstNumber = getRandomNumber(minValue, maxValue);
-  const secondNumber = getRandomNumber(minValue, maxValue);
+  const firstNumber = getRandomNumber(1, 30);
+  const secondNumber = getRandomNumber(1, 30);
   const mathOperator = mathOperators[getRandomNumber(0, mathOperators.length - 1)];
   const question = `${firstNumber} ${mathOperator} ${secondNumber}`;
   const rightAnswer = String(generateOperation(firstNumber, secondNumber, mathOperator));
   return [question, rightAnswer];
 };
 
-const startBrainCalcGame = () => runEngine(description, getCalc);
+const startBrainCalcGame = () => runEngine(discription, getCalc);
 
 export default startBrainCalcGame;
