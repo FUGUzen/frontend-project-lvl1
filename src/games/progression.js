@@ -1,30 +1,37 @@
 import runEngine from '../index.js';
-import getRandomNumber from '../../utils/helpers/utils.js';
+import { minValue, maxValue, getRandomNumber } from '../../utils/helpers/utils.js';
 
-const discription = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const lengthProgression = 10;
 
-const getProgression = () => {
-  const firstNum = getRandomNumber(1, 30);
-  const step = getRandomNumber(1, 5);
-  const arr = [];
+const isProgression = (startProgression, stepProgression) => {
+  const progressions = [];
 
-  for (let i = 1; i <= lengthProgression; i += 1) {
-    arr.push(firstNum + i * step);
+  for (let i = 0; i < lengthProgression; i += 1) {
+    const value = startProgression + stepProgression * i;
+    progressions.push(value);
   }
-  const hiddenElementPosition = getRandomNumber(1, lengthProgression) - 1;
+  return progressions;
+};
 
-  const rightAnswer = String(arr[hiddenElementPosition]);
-  arr[hiddenElementPosition] = '..';
-
-  const question = `${arr.join(' ')}`;
-
+const getProgression = () => {
+  const minStep = 2;
+  const maxStep = 5;
+  const step = getRandomNumber(minStep, maxStep);
+  const start = getRandomNumber(minValue, maxValue);
+  const progression = isProgression(start, step);
+  const minIndexOfHiddenNumber = 0;
+  const maxIndexOfHiddenNumber = lengthProgression - 1;
+  const IndexOfHiddenNumber = getRandomNumber(minIndexOfHiddenNumber, maxIndexOfHiddenNumber);
+  const rightAnswer = String(progression[IndexOfHiddenNumber]);
+  progression[IndexOfHiddenNumber] = '..';
+  const question = progression.join(' ');
   return [question, rightAnswer];
 };
 
 const startBrainProgressionGame = () => {
-  runEngine(discription, getProgression);
+  runEngine(description, getProgression);
 };
 
 export default startBrainProgressionGame;

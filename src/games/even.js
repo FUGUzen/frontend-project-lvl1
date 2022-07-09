@@ -1,16 +1,16 @@
 import runEngine from '../index.js';
-import getRandomNumber from '../../utils/helpers/utils.js';
+import { minValue, maxValue, getRandomNumber } from '../../utils/helpers/utils.js';
 
-const discription = 'Answer "yes" if the number is even, otherwise answer "no"';
+const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const isEven = (num) => num % 2 === 0;
 
 const getEven = () => {
-  const question = getRandomNumber(1, 30);
+  const question = getRandomNumber(minValue, maxValue);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
-const startBrainEvenGame = () => runEngine(discription, getEven);
+const startBrainEvenGame = () => runEngine(description, getEven);
 
 export default startBrainEvenGame;
