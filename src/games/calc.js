@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import getRandomNumber from '../../utils/helpers/utils.js';
+import { minValue, maxValue, getRandomNumber } from '../utils.js';
 
 const discription = 'What is the result of the expression?';
 
