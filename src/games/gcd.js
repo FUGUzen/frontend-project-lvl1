@@ -1,9 +1,9 @@
 import runEngine from '../index.js';
-import { minValue, maxValue, getRandomNumber } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const isGcd = (a, b) => {
+const getGcd = (a, b) => {
   let num1 = a;
   let num2 = b;
   let gcd = '';
@@ -19,15 +19,15 @@ const isGcd = (a, b) => {
   return gcd;
 };
 
-const getGcd = () => {
-  const randomNumber1 = getRandomNumber(minValue, maxValue);
-  const randomNumber2 = getRandomNumber(minValue, maxValue);
-  const question = `${randomNumber1} ${randomNumber2}`;
+const generateRound = () => {
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
+  const question = `${number1} ${number2}`;
 
-  const rightAnswer = isGcd(randomNumber1, randomNumber2).toString();
+  const rightAnswer = getGcd(number1, number2).toString();
   return [question, rightAnswer];
 };
 
-const startBrainGcdGame = () => runEngine(description, getGcd);
+const startBrainGcdGame = () => runEngine(description, generateRound);
 
 export default startBrainGcdGame;
