@@ -1,31 +1,29 @@
 import runEngine from '../index.js';
-import { minValue, maxValue, getRandomNumber } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
 const lengthProgression = 10;
 
-const isProgression = (startProgression, stepProgression) => {
+const isProgression = (length) => {
+  const firstMember = getRandomNumber(1, 100);
+  const step = getRandomNumber(2, 5);
+
   const progressions = [];
 
-  for (let i = 0; i < lengthProgression; i += 1) {
-    const value = startProgression + stepProgression * i;
+  for (let i = 0; i < length; i += 1) {
+    const value = firstMember + step * i;
     progressions.push(value);
   }
   return progressions;
 };
 
 const getProgression = () => {
-  const minStep = 2;
-  const maxStep = 5;
-  const step = getRandomNumber(minStep, maxStep);
-  const start = getRandomNumber(minValue, maxValue);
-  const progression = isProgression(start, step);
-  const minIndexOfHiddenNumber = 0;
-  const maxIndexOfHiddenNumber = lengthProgression - 1;
-  const IndexOfHiddenNumber = getRandomNumber(minIndexOfHiddenNumber, maxIndexOfHiddenNumber);
-  const rightAnswer = String(progression[IndexOfHiddenNumber]);
-  progression[IndexOfHiddenNumber] = '..';
+  const progression = isProgression(lengthProgression);
+  const hiddenIndex = getRandomNumber(1, lengthProgression);
+  const rightAnswer = progression[hiddenIndex].toString();
+
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
   return [question, rightAnswer];
 };

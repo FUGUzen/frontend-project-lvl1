@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { minValue, maxValue, getRandomNumber } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
@@ -15,12 +15,12 @@ const isPrime = (num) => {
   return flag;
 };
 
-const getPrime = () => {
-  const question = getRandomNumber(minValue, maxValue);
+const generateRound = () => {
+  const question = getRandomNumber(1, 100);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };
 
-const startBrainPrime = () => runEngine(description, getPrime);
+const startBrainPrime = () => runEngine(description, generateRound);
 
 export default startBrainPrime;
