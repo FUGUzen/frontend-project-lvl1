@@ -1,5 +1,5 @@
 import runEngine from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const discription = 'What is the result of the expression?';
 
@@ -14,7 +14,7 @@ const calculate = (firstNum, secondNum, mathOperator) => {
     case '*':
       return firstNum * secondNum;
     default:
-    throw new Error(`don't know operations ${mathOperator}`);
+      throw new Error(`don't know operations ${mathOperator}`);
   }
 };
 
